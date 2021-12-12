@@ -7,24 +7,21 @@
 // “A revolution without dancing is a revolution not worth having.” “revolution”
 // ”Which would be worse - to live as a monster, or to die as a good man?” “monster”
 
-// let input = "A revolution without dancing is a revolution not worth having."
-
-
-
 function longest (input) {
+    
     let inputArr = input.split(" ");
-    // console.log(inputArr);
     let long = inputArr[0];
 
     for (let i=1; i< inputArr.length; i++ ) {
-        if ( inputArr[i].length >= long.length ) { /* inputArr[i].lenght-1 is done to eliminate any possible punctuation after any word */
+        if ( inputArr[i].length >= long.length ) {
             long = inputArr[i];
-        } 
+        }
     }
     console.log(long);
 }
 
 longest ("A revolution without dancing is a sevolution not worth having.");
 
+// Punctuation issue can not be solved without regex (string.replace), which we have not yet studied.
 
-// ---------- NOT DONE ---------- \\
+// ---------- DONE ---------- \\
